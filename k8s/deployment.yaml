@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yeslay
+  name: sweet
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: yeslay
+      app: sweet
   template:
     metadata:
       labels:
-        app: yeslay
+        app: sweet
     spec:
       containers:
-      - image: okteto.dev/yeslay:latest
-        name: yeslay
+      - image: okteto.dev/sweet:latest
+        name: sweet
         ports:
         - containerPort: 8080
         env:
